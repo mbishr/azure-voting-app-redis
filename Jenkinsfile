@@ -58,9 +58,9 @@ pipeline {
          }
       }
       stage('Deploy to PROD') {
-         when {
-            branch 'master'
-         }
+        //  when {
+        //     branch 'master'
+        //  }
          environment {
             ENVIRONMENT = 'prod'
          }
