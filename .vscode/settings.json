@@ -4,7 +4,7 @@
 
 {
     "jenkins-runner.jobs": {
-        "ide": {
+        "azure-voting": {
             "runWith": "mypipeline",
             "name": "azure-voting",
             "isDefault": true
@@ -12,7 +12,7 @@
     },
     "jenkins-runner.hostConfigs": {
         "mypipeline": {
-            "url": "http://52.165.17.203/:8080",
+            "url": "http://52.165.17.203:8080",
             "user": "admin",
             "password": "hgrvkN!@00",
             "userCrumIssuer": true
