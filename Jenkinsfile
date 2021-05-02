@@ -39,9 +39,9 @@ pipeline {
       }
     
       stage('Approve PROD Deploy') {
-         when {
-            branch 'master'
-         }
+        //  when {
+        //     branch 'master'
+        //  }
          options {
             timeout(time: 1, unit: 'HOURS') 
          }
