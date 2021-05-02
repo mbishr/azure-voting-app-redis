@@ -69,8 +69,8 @@ pipeline {
             acsDeploy(
                azureCredentialsId: "AzureSP",
                configFilePaths: "**/*.yaml",
-               containerService: "${ENVIRONMENT}-demo-cluster | AKS",
-               resourceGroupName: "${ENVIRONMENT}-demo",
+               containerService: "CScluster | AKS",
+               resourceGroupName: "Kubernetes-Cloud",
                sshCredentialsId: ""
             )
          }
