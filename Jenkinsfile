@@ -37,21 +37,7 @@ pipeline {
             """)
          }
       }
-      stage('Deploy to QA') {
-         environment {
-            ENVIRONMENT = 'qa'
-         }
-         steps {
-            echo "Deploying to ${ENVIRONMENT}"
-            acsDeploy(
-               azureCredentialsId: "AzureSP",
-               configFilePaths: "**/*.yaml",
-               containerService: "CScluster | AKS",
-               resourceGroupName: "Kubernetes-Cloud",
-               sshCredentialsId: ""
-            )
-         }
-      }
+    
       stage('Approve PROD Deploy') {
          when {
             branch 'master'
